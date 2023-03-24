@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %} {{sign}} {% endblock %}
+
+
+{% block content %}
+
+
+    {% if response is None %}
+        <h1> Неправильный знак зодиака - {{sign}} </h1>
+    {% else %}
+        <h2> {{sign.title}} </h2>
+        <h4>  {{response.response}} </h4>
+    {% endif %}
+
+
+
+{% endblock  %}

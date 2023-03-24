@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+</head>
+<body>
+    <h2>Информации о людях</h2>
+<ul>
+    {% for person in lst %}
+        <h5> ФИО - {{ person.name }} </h5>
+        <p> Возраст - {{ person.age }} </p>
+        <p> Номер телефона - {{ person.phone }} </p>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

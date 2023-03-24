@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Знаки зодиака {% endblock %}
+
+{% block content %}
+
+
+<ul>
+    <li> <a href='{% url "by_type"  %}'> Сортировать по элементам </a> </li>
+    {% for sign, value in zodiacs.items %}
+        <li> <a href='{% url "what_zodiac" sign %}'> {{ sign.title }} </a> </li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}
